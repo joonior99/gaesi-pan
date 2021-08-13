@@ -4,14 +4,10 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
 const Header = (props) => {
-  // if (window.location.pathname === '/write') 
-  // return null;
+  
   return (
     <React.Fragment>
-      {/* <Link to="/"> */}
         <Title onClick={()=>{props.history.push("/");}} style={{cursor: "pointer" }}>Gaesi-pan</Title>
-      {/* </Link> */}
-
       <Buttonset>
         <Link to="/">
           <Button>모든 포스팅</Button>
