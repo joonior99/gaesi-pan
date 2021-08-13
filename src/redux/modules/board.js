@@ -2,11 +2,6 @@ import { firestore } from "../../firebase";
 
 const board_db = firestore.collection("board");
 
-// configStore.js 만들고 firebase 설치 후 import 시키고 firestore 대쉬보드의 collection 가져오고는 이해함.
-// 리덕스 모듈에서 파이어베이스 호출하고, 리듀서 수정하고, 컴포넌트에 연결하고 하는 순서는 알 거 같다. 
-// loadBoardFB라는 호출 함수 강의자료에 맞게 코드 작성하고 위의 순서에 맞게 잘한 거 같은데 에러의 원인을 모르겠다.
-// loadBoardFB로 호출하면 initialstate의 board_list는 삭제해도 될까요? 
-
 // Actions
 const LOAD = "board/LOAD";
 const CREATE = "board/CREATE";
@@ -156,7 +151,6 @@ export default function reducer(state = initialState, action = {}) {
       return { board_list: boardlist };
     }
 
-    //심화 강의에서 const 하고 actioncreators끼리 묶고 export 하는데 여기서는 안해도 괜찮을까요???
     default:
       return state;
   }
